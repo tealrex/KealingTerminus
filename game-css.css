@@ -1,0 +1,169 @@
+/*
+ __  __     ______     ______     __         __     __   __     ______        ______   ______     ______     __    __     __     __   __     __  __     ______    
+/\ \/ /    /\  ___\   /\  __ \   /\ \       /\ \   /\ "-.\ \   /\  ___\      /\__  _\ /\  ___\   /\  == \   /\ "-./  \   /\ \   /\ "-.\ \   /\ \/\ \   /\  ___\   
+\ \  _"-.  \ \  __\   \ \  __ \  \ \ \____  \ \ \  \ \ \-.  \  \ \ \__ \     \/_/\ \/ \ \  __\   \ \  __<   \ \ \-./\ \  \ \ \  \ \ \-.  \  \ \ \_\ \  \ \___  \  
+ \ \_\ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\  \ \_\\"\_\  \ \_____\       \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \ \_\  \ \_\  \ \_\\"\_\  \ \_____\  \/\_____\ 
+  \/_/\/_/   \/_____/   \/_/\/_/   \/_____/   \/_/   \/_/ \/_/   \/_____/        \/_/   \/_____/   \/_/ /_/   \/_/  \/_/   \/_/   \/_/ \/_/   \/_____/   \/_____/ 
+                                                                                                                                                                  
+*/
+:root {
+	/* user changeable */
+	--text-fontsize: 14px;
+	--text-color: rgb(204,204,204);
+	--background: rgb(0,0,0);
+	
+	/* map color scheme */
+	--map-background-all: rgb(117, 109, 66);
+	--map-text-color-active: var(--background);
+	--map-background-active: var(--text-color);
+	
+	--map-text-color-TrainStation1: rgb(0,0,0);
+	--map-text-color-Home: rgb(0,0,0);
+	--map-text-color-MainStreet: rgb(0,0,0);
+	--map-text-color-Store: rgb(0,0,0);
+	--map-text-color-Path: rgb(0,0,0);
+	--map-text-color-Well: rgb(0,0,0);
+	--map-text-color-Barn: rgb(0,0,0);
+	--map-text-color-TrainStation2: rgb(0,0,0);
+	--map-text-color-AbandonedStreet: rgb(0,0,0);
+	--map-text-color-OldShop: rgb(0,0,0);
+	--map-text-color-OldHouse: rgb(0,0,0);
+	--map-text-color-OldFarm: rgb(0,0,0);
+	--map-text-color-TrainStation3: rgb(0,0,0);
+	--map-text-color-AncientPath: rgb(0,0,0);
+	--map-text-color-DarkCastle: rgb(0,0,0);
+	--map-text-color-TrainStation4: rgb(0,0,0);
+	--map-text-color-Highway: rgb(0,0,0);
+	--map-text-color-MarketPlace: rgb(0,0,0);
+	--map-text-color-Bank: rgb(0,0,0);
+	--map-text-color-Armory: rgb(0,0,0);
+	--map-text-color-TempleOfWisdom: rgb(0,0,0);
+	--map-text-color-Forest: rgb(0,0,0);
+
+	--map-background-TrainStation1: rgba(0,0,0,0);
+	--map-background-Home: rgba(0,0,0,0);
+	--map-background-MainStreet: rgba(0,0,0,0);
+	--map-background-Store: rgba(0,0,0,0);
+	--map-background-Path: rgba(0,0,0,0);
+	--map-background-Well: rgba(0,0,0,0);
+	--map-background-Barn: rgba(0,0,0,0);
+	--map-background-TrainStation2: rgba(0,0,0,0);
+	--map-background-AbandonedStreet: rgba(0,0,0,0);
+	--map-background-OldShop: rgba(0,0,0,0);
+	--map-background-OldHouse: rgba(0,0,0,0);
+	--map-background-OldFarm: rgba(0,0,0,0);
+	--map-background-TrainStation3: rgba(0,0,0,0);
+	--map-background-AncientPath: rgba(0,0,0,0);
+	--map-background-DarkCastle: rgba(0,0,0,0);
+	--map-background-TrainStation4: rgba(0,0,0,0);
+	--map-background-Highway: rgba(0,0,0,0);
+	--map-background-MarketPlace: rgba(0,0,0,0);
+	--map-background-Bank: rgba(0,0,0,0);
+	--map-background-Armory: rgba(0,0,0,0);
+	--map-background-TempleOfWisdom: rgba(0,0,0,0);
+	--map-background-Forest: rgba(0,0,0,0);
+}
+html, body {
+	font-family: "Consolas", "Courier New", "Lucida Console", "Lucida Sans TypeWriter", "MS Gothic", "NSimSun";
+	font-size: var(--text-fontsize);
+	color: var(--text-color);
+	background-color: var(--background);
+	height: 100%;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+a:link {
+	color: var(--text-color);
+	background-color: var(--background);
+	text-decoration: none;
+}
+a:visited {
+	color: var(--text-color);
+	background-color: var(--background);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--background);
+	background-color: var(--text-color);
+	text-decoration: underline;
+}
+a:active {
+	color: var(--text-color);
+	background-color: var(--background);
+	text-decoration: underline;
+}
+#text {
+	overflow: auto;
+	white-space: pre; /* not needed anymore */
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+#cursor {
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	-webkit-animation: blink 1s infinite;
+	animation: blink 1s infinite;
+}
+@-webkit-keyframes blink {
+	0%   {opacity: 1.0;}
+	20%  {opacity: 1.0;}
+	40%  {opacity: 0.9;}
+	50%  {opacity: 0.0;}
+	60%  {opacity: 0.9;}
+	80%  {opacity: 1.0;}
+	100% {opacity: 1.0;}
+}
+@keyframes blink {
+	0%   {opacity: 1.0;}
+	25%  {opacity: 0.9;}
+	50%  {opacity: 0.0;}
+	75%  {opacity: 0.9;}
+	100% {opacity: 1.0;}
+}
+
+.black       {color: rgb(0,0,0);}
+.blue        {color: rgb(0,55,218);}
+.green       {color: rgb(19,161,14);}
+.aqua        {color: rgb(58,150,221);}
+.red         {color: rgb(197,15,31);}
+.purple      {color: rgb(136,23,152);}
+.yellow      {color: rgb(193,156,0);}
+.white       {color: rgb(204,204,204);}
+.gray        {color: rgb(118,118,118);}
+.lightblue   {color: rgb(59,120,255);}
+.lightgreen  {color: rgb(22,198,12);}
+.lightaqua   {color: rgb(97,214,214);}
+.lightred    {color: rgb(231,72,86);}
+.lightpurple {color: rgb(180,0,158);}
+.lightyellow {color: rgb(249,241,165);}
+.brightwhite {color: rgb(242,242,242);}
+
+.notepad         {background-color: var(--map-background-all); color: rgb(0,0,0)}
+
+.Home            {background-color: var(--map-background-Home);            color: var(--map-text-color-Home);}
+.TrainStation1   {background-color: var(--map-background-TrainStation1);   color: var(--map-text-color-TrainStation1);}
+.MainStreet      {background-color: var(--map-background-MainStreet);      color: var(--map-text-color-MainStreet);}
+.Store           {background-color: var(--map-background-Store);           color: var(--map-text-color-Store);}
+.Path            {background-color: var(--map-background-Path);            color: var(--map-text-color-Path);}
+.Well            {background-color: var(--map-background-Well);            color: var(--map-text-color-Well);}
+.Barn            {background-color: var(--map-background-Barn);            color: var(--map-text-color-Barn);}
+.TrainStation2   {background-color: var(--map-background-TrainStation2);   color: var(--map-text-color-TrainStation2);}
+.AbandonedStreet {background-color: var(--map-background-AbandonedStreet); color: var(--map-text-color-AbandonedStreet);}
+.OldShop         {background-color: var(--map-background-OldShop);         color: var(--map-text-color-OldShop);}
+.OldHouse        {background-color: var(--map-background-OldHouse);        color: var(--map-text-color-OldHouse);}
+.OldFarm         {background-color: var(--map-background-OldFarm);         color: var(--map-text-color-OldFarm);}
+.TrainStation3   {background-color: var(--map-background-TrainStation3);   color: var(--map-text-color-TrainStation3);}
+.AncientPath     {background-color: var(--map-background-AncientPath);     color: var(--map-text-color-AncientPath);}
+.DarkCastle      {background-color: var(--map-background-DarkCastle);      color: var(--map-text-color-DarkCastle);}
+.TrainStation4   {background-color: var(--map-background-TrainStation4);   color: var(--map-text-color-TrainStation4);}
+.Highway         {background-color: var(--map-background-Highway);         color: var(--map-text-color-Highway);}
+.MarketPlace     {background-color: var(--map-background-MarketPlace);     color: var(--map-text-color-MarketPlace);}
+.Bank            {background-color: var(--map-background-Bank);            color: var(--map-text-color-Bank);}
+.Armory          {background-color: var(--map-background-Armory);          color: var(--map-text-color-Armory);}
+.TempleOfWisdom  {background-color: var(--map-background-TempleOfWisdom);  color: var(--map-text-color-TempleOfWisdom);}
+.Forest          {background-color: var(--map-background-Forest);          color: var(--map-text-color-Forest);}
