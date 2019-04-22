@@ -1,0 +1,19 @@
+{
+    "name": "Kealing Terminus",
+    "short_name": "Kealing Terminus",
+    "icons": [
+        {
+            "src": "./files/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./files/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#13a10e",
+    "background_color": "#13a10e",
+    "display": "standalone"
+}
